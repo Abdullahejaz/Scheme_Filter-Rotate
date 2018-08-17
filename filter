@@ -1,0 +1,14 @@
+; Name - Abdullah Ejaz
+; For Class - Theory of Computing Languages
+; Date - 06 Aug 2018
+; Program - filter
+; Give input in the format - (filter (lambda (X) ( < X 5)) '(3 9 5 8 2 4 7)) 
+
+(define filterb (lambda (pred lst)
+(cond ((null? lst) '())
+(( pred (car lst)) (cons (car lst) (filterb pred (cdr lst))))
+(else (filterb pred (cdr lst)))
+)
+)
+)
+      
